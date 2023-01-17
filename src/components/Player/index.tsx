@@ -7,7 +7,7 @@ function Player() {
 
   return (
     <div className="flex h-[calc(100vh-80px)] flex-col items-center justify-center bg-brand-dark">
-      <div className="m-[-40px]">
+      <div className="mt-[-80px]">
         <PlayerContainer variant={currentVariant} />
       </div>
 
