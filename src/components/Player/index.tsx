@@ -5,7 +5,7 @@ import { MusicPlayerProvider } from "../../hooks/useMusicPlayer"
 import { useDocumentTitle } from "../../hooks/useDocument"
 import { CaretUp } from "phosphor-react"
 
-function Player() {
+export function Player() {
   const [showVariantOptions, setShowVariantOptions] = useState<boolean>(false)
   useDocumentTitle("Music Player")
 
@@ -37,5 +37,3 @@ function Player() {
     </MusicPlayerProvider>
   )
 }
-
-export default Player

@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import App from "../src/App"
-import Player from "../src/components/Player"
+import { Player, ProductCard } from "../src/components"
 
 const router = createBrowserRouter([
   {
@@ -10,6 +10,10 @@ const router = createBrowserRouter([
   {
     path: "/player",
     element: <Player />,
+  },
+  {
+    path: "/productcard",
+    element: <ProductCard />,
   },
 ])
 
