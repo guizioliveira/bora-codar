@@ -7,7 +7,9 @@ function Player() {
 
   return (
     <div className="flex h-[calc(100vh-80px)] flex-col items-center justify-center bg-brand-dark">
-      <PlayerContainer variant={currentVariant} />
+      <div className="m-[-40px]">
+        <PlayerContainer variant={currentVariant} />
+      </div>
 
       <div className="absolute bottom-0 flex h-3 w-96 justify-between rounded-t-[9.6px] bg-brand-player-bg py-8 px-8">
         <label className="flex items-center gap-2 text-white">
