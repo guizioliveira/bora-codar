@@ -43,6 +43,7 @@ export default function ChallengeCard({ challenge }: ChallengeCardProps) {
           <a
             className="flex w-full items-center justify-center gap-1 rounded-md bg-[#9b6cfd] px-4 py-2 text-center font-bold text-white transition-colors duration-300 hover:bg-[#c3a7fd]"
             href={challenge.figmaUrl}
+            target="_blank"
           >
             Figma
             <FigmaLogo size={20} weight="bold" color="#fff" />
