@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/productcard",
-    element: <ProductCard />,
+    element: <ProductCard productCode={42404} />,
   },
 ])
 
