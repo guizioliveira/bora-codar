@@ -1,35 +1,88 @@
-import React, { createContext, ReactNode, useContext, useState } from "react";
-
-type Music = {
-  title: string
-  artist: string
-  musicDuration: number
-  photo: string
-}
-
+import React, {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react"
+import { PlayerVariant, Music } from "../types/playerTypes"
+import { musics } from "../data/musics"
 interface MusicPlayerContextData {
-  playList: Music[];
-  isPlaying: boolean;
-  currentTime: number;
+  isPlaying: boolean
+  handlePlay: () => void
+  nextMusic: () => void
+  previousMusic: () => void
+  currentTime: number
+  variant: PlayerVariant
+  setVariant: React.Dispatch<PlayerVariant>
+  secondsToMinutes: (timeAmount: number) => string
+  currentMusic: Music
 }
 
 interface MusicPlayerProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
-const MusicPlayerContext = createContext<MusicPlayerContextData>({} as MusicPlayerContextData);
+const MusicPlayerContext = createContext<MusicPlayerContextData>(
+  {} as MusicPlayerContextData
+)
 
 export function MusicPlayerProvider({ children }: MusicPlayerProviderProps) {
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const [ currentTime, setCurrentTime ] = useState<number>(0);
-  const playList = [{ title: "Teste", artist: "Teste", musicDuration: 200, photo: './assets/album-photo.png'}];
+  const [isPlaying, setIsPlaying] = useState<boolean>(false)
+  const [currentTime, setCurrentTime] = useState<number>(0)
+  const [musicIndex, setMusicIndex] = useState<number>(0)
+  const [currentMusic, setCurrentMusic] = useState<Music>(musics[musicIndex])
+  const [variant, setVariant] = useState<PlayerVariant>("full")
+
+  function secondsToMinutes(timeAmount: number) {
+    const minutes = Math.floor(timeAmount / 60)
+    let seconds = Math.floor(timeAmount % 60)
+
+    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
+      2,
+      "0"
+    )}`
+  }
+
+  function handlePlay() {
+    setIsPlaying(!isPlaying)
+  }
+
+  function nextMusic() {
+    if (musicIndex < musics.length - 1) setMusicIndex((state) => state + 1)
+  }
+
+  function previousMusic() {
+    if (musicIndex > 0) setMusicIndex((state) => state - 1)
+    setCurrentTime(0)
+  }
+
+  useEffect(() => {
+    setCurrentMusic(musics[musicIndex])
+    setIsPlaying(false)
+    setCurrentTime(0)
+  }, [musicIndex])
+
+  useEffect(() => {
+    if (isPlaying && currentTime < currentMusic.duration) {
+      setTimeout(() => {
+        setCurrentTime((state) => state + 1)
+      }, 1000)
+    }
+  }, [isPlaying, currentTime])
 
   return (
-    <MusicPlayerContext.Provider 
+    <MusicPlayerContext.Provider
       value={{
         isPlaying,
+        handlePlay,
+        nextMusic,
+        previousMusic,
         currentTime,
-        playList
+        variant,
+        setVariant,
+        secondsToMinutes,
+        currentMusic,
       }}
     >
       {children}
@@ -37,10 +90,7 @@ export function MusicPlayerProvider({ children }: MusicPlayerProviderProps) {
   )
 }
 
-
 export function useMusicPlayer() {
-  const context = useContext(MusicPlayerContext);
-  return context;
+  const context = useContext(MusicPlayerContext)
+  return context
 }
-
-
