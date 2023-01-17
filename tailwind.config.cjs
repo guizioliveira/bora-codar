@@ -5,6 +5,8 @@ module.exports = {
     fontFamily: {
       sans: ["Roboto", "sans-serif"],
       firaCode: ["Fira Code", "monospace"],
+      lato: ["Lato", "sans-serif"],
+      crimson: ["Crimson Pro"],
     },
     extend: {
       colors: {
