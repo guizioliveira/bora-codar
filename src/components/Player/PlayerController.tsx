@@ -1,38 +1,41 @@
-import React from 'react'
-import { Play, Rewind, FastForward, Pause } from 'phosphor-react'
+import React from "react"
+import { Play, Rewind, FastForward, Pause } from "phosphor-react"
+import { useMusicPlayer } from "../../hooks/useMusicPlayer"
 
-interface PlayerControllerProps{
-  isPlaying: boolean;
-  setIsPlaying: React.Dispatch<boolean>;
-}
-
-export default function PlayerController({ isPlaying, setIsPlaying }: PlayerControllerProps) {
+export default function PlayerController() {
+  const { isPlaying, handlePlay, nextMusic, previousMusic } = useMusicPlayer()
   return (
     <>
-      <div className='flex justify-between box-content'>
-        <button className='group'>
-          <Rewind 
-            className='text-[#E1E1E6] group-hover:text-[#b398ce] transition-colors duration-200' size={28} weight="fill"
+      <div className="box-content flex justify-between">
+        <button className="group">
+          <Rewind
+            className="text-[#E1E1E6] transition-colors duration-200 group-hover:text-[#b398ce]"
+            size={28}
+            weight="fill"
+            onClick={previousMusic}
           />
         </button>
-        <button 
-          className='group'
-          onClick={() => setIsPlaying(!isPlaying)}
-        >
+        <button className="group" onClick={handlePlay}>
           {!isPlaying ? (
-            <Play 
-              className='text-[#E1E1E6] group-hover:text-[#b398ce] transition-colors duration-200' size={28} weight="fill"
+            <Play
+              className="text-[#E1E1E6] transition-colors duration-200 group-hover:text-[#b398ce]"
+              size={28}
+              weight="fill"
             />
-          ) : 
-          (
-            <Pause 
-              className='text-[#E1E1E6] group-hover:text-[#b398ce] transition-colors duration-200'  size={28} weight="fill"
+          ) : (
+            <Pause
+              className="text-[#E1E1E6] transition-colors duration-200 group-hover:text-[#b398ce]"
+              size={28}
+              weight="fill"
             />
           )}
         </button>
-        <button className='group'>
-          <FastForward 
-            className='text-[#E1E1E6] group-hover:text-[#b398ce] transition-colors duration-200' size={28} weight="fill"
+        <button className="group">
+          <FastForward
+            className="text-[#E1E1E6] transition-colors duration-200 group-hover:text-[#b398ce]"
+            size={28}
+            weight="fill"
+            onClick={nextMusic}
           />
         </button>
       </div>

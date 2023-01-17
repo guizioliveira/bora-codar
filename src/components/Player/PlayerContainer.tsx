@@ -1,16 +1,12 @@
-import React, { useState } from "react"
 import PlayerController from "./PlayerController"
 import { TimelineBar } from "./TimelineBar"
 
-export type PlayerVariant = "full" | "short" | "minimal"
+import { useMusicPlayer } from "../../hooks/useMusicPlayer"
 
-interface PlayerProps {
-  variant: PlayerVariant
-}
+export function PlayerContainer() {
+  const { variant, currentMusic } = useMusicPlayer()
 
-export function PlayerContainer(props: PlayerProps) {
-  const isVariantFull = props.variant === "full"
-  const [isPlaying, setIsPlaying] = useState<boolean>(false)
+  const isVariantFull = variant === "full"
 
   return (
     <div
@@ -30,26 +26,26 @@ export function PlayerContainer(props: PlayerProps) {
             isVariantFull
               ? "h-[189.66px] w-[189.66px]"
               : "h-[84.03px] w-[84.03px]"
-          } rounded-md bg-[#b398ce]`}
+          } overflow-hidden rounded-md bg-[#b398ce]`}
         >
-          <img src="assets/album-photo.png" alt="Album photo" />
+          <img src={currentMusic.albumCover} alt={currentMusic.title} />
         </div>
         <div className="flex flex-col gap-[9px]">
           <h2 className="text-2xl font-bold leading-[100%] text-[#E1E1E6]">
-            Acorda Devinho
+            {currentMusic.title}
           </h2>
           <span className="text-[19px] font-normal leading-[100%] text-[#E1E1E6] opacity-70">
-            Banda Rocketseat
+            {currentMusic.artist}
           </span>
         </div>
       </div>
       <div className={`mt-[29px] ${!isVariantFull && "px-[54.5px]"}`}>
-        <PlayerController isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+        <PlayerController />
       </div>
 
-      {props.variant !== "minimal" && (
+      {variant !== "minimal" && (
         <div className="mt-[29px]">
-          <TimelineBar duration={20} isPlaying={isPlaying} />
+          <TimelineBar />
         </div>
       )}
     </div>
