@@ -7,6 +7,7 @@ module.exports = {
       firaCode: ["Fira Code", "monospace"],
       lato: ["Lato", "sans-serif"],
       crimson: ["Crimson Pro"],
+      inter: ["Inter", "sans-serif"],
     },
     extend: {
       colors: {

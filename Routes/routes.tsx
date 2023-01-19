@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import App from "../src/App"
-import { Player, ProductCard } from "../src/components"
+import { ButtonStylePage, Player, ProductCard } from "../src/components"
 
 const router = createBrowserRouter([
   {
@@ -14,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/productcard",
     element: <ProductCard productCode={42404} />,
+  },
+  {
+    path: "/buttons",
+    element: <ButtonStylePage />,
   },
 ])
 

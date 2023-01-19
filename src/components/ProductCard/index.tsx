@@ -48,17 +48,17 @@ export function ProductCard({ productCode }: ProductCardProps) {
               <span className="font-lato text-[10px] font-light uppercase leading-[100%] text-[#271a45]">
                 Código: {selectedProduct.id}
               </span>
-              <h2 className="m-0 font-crimson text-[32px] font-semibold leading-8 text-[#271a45]">
+              <h2 className="m-0 font-crimson text-[32px] font-semibold leading-8 text-[#271a45] antialiased">
                 {selectedProduct.title}
               </h2>
-              <p className="m-0 font-lato text-base leading-[100%] text-[#271a45] opacity-[0.67]">
+              <p className="m-0 font-lato text-base leading-[100%] text-[#271a45] antialiased opacity-[0.67]">
                 {new Intl.NumberFormat("pt-BR", {
                   style: "currency",
                   currency: "BRL",
                 }).format(selectedProduct.price)}
               </p>
             </div>
-            <button className="mt-5 cursor-pointer rounded-full px-4 py-2 text-center font-lato text-xs uppercase leading-4 outline outline-1 outline-[#271a45] transition-colors duration-300 hover:bg-[#271a45] hover:text-[#d9cdf7]">
+            <button className="mt-5 cursor-pointer rounded-full px-4 py-2 text-center font-lato text-xs uppercase leading-4 antialiased outline outline-1 outline-[#271a45] transition-colors duration-300 hover:bg-[#271a45] hover:text-[#d9cdf7]">
               Adicionar à cesta
             </button>
           </div>
