@@ -3,8 +3,8 @@ import React from "react"
 
 export default function ButtonTable() {
   return (
-    <div className="flex flex-col">
-      <div className="flex w-full items-center rounded-t-lg bg-[#1C162C] px-4">
+    <div className="grid">
+      <div className="flex w-full items-center rounded-t-lg bg-[#1C162C]">
         <div className="h-16 w-[94px]"></div>
         <span className="mx-4 w-[230px] text-center font-sans text-[11px] uppercase text-white">
           Botão primário
@@ -20,7 +20,7 @@ export default function ButtonTable() {
         </span>
       </div>
 
-      <div className="h-[17.5px] w-full border-r-[6px] border-[#1C162C] bg-[#0b0911]">
+      <div className=" h-[17.5px] w-full border-r-[6px] border-[#1C162C] bg-[#0b0911]">
         <div className="h-full w-[94px] bg-[#1C162C]"></div>
       </div>
       <div className="flex items-center gap-8 border-r-[6px] border-[#1C162C] bg-[#0b0911]">
