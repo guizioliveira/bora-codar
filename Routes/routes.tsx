@@ -1,22 +1,26 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom"
 import App from "../src/App"
 import { ButtonStylePage, Player, ProductCard } from "../src/components"
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/bora-codar/",
     element: <App />,
   },
   {
-    path: "/player",
+    path: "/bora-codar/player",
     element: <Player />,
   },
   {
-    path: "/productcard",
+    path: "/bora-codar/productcard",
     element: <ProductCard productCode={42404} />,
   },
   {
-    path: "/buttons",
+    path: "/bora-codar/buttons",
     element: <ButtonStylePage />,
   },
 ])
