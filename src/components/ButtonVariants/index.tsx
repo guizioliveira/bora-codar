@@ -1,11 +1,14 @@
 import React, { useState } from "react"
 import { TestArea } from "./TestArea"
 import { X } from "phosphor-react"
-import ButtonTable from "./ButtonTable"
+import { Table, TableMobile } from "./ButtonTables"
 import Button from "../Ui/Button"
+import useWindowSize from "../../hooks/useWindowSize"
 
 export function ButtonStylePage() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
+  const { width } = useWindowSize()
+
   return (
     <div className="relative min-h-[calc(100vh-80px)] w-full overflow-hidden bg-[#0b0911] pt-12 md:pt-24">
       <div className="m-auto flex w-full flex-col px-5 md:w-[958px] md:p-0">
@@ -27,9 +30,7 @@ export function ButtonStylePage() {
             setIsOpen(true)
           }}
         />
-        <div className="mb-8">
-          <ButtonTable />
-        </div>
+        <div className="mb-8">{width > 767 ? <Table /> : <TableMobile />}</div>
         <div
           className={`${
             isOpen ? "translate-x-0" : "translate-x-full"
@@ -37,7 +38,7 @@ export function ButtonStylePage() {
         >
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute right-8 top-5 text-white"
+            className="absolute right-8 top-10 text-white"
           >
             <X size={32} />
           </button>

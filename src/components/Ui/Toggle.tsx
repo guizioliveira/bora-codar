@@ -3,7 +3,7 @@ import React from "react"
 
 interface ToogleProps {
   getter: boolean
-  setter: React.Dispatch<boolean>
+  setter: (value: boolean) => void
 }
 
 export function Toggle({ getter, setter }: ToogleProps) {
