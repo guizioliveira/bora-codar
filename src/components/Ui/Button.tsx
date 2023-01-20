@@ -9,6 +9,8 @@ interface ButtonProps {
   disabled?: boolean
   loading?: boolean
   movable?: boolean
+  onClick?: React.MouseEventHandler<HTMLInputElement>
+  className?: string
 }
 
 export default function Button(props: ButtonProps) {
@@ -28,7 +30,10 @@ export default function Button(props: ButtonProps) {
   return (
     <button
       disabled={props.disabled}
-      className={`${variantColor[props.variant]}  ${handleCurson(
+      onClick={props.onClick}
+      className={`${props.className} ${
+        variantColor[props.variant]
+      }  ${handleCurson(
         props.movable,
         props.loading
       )} flex w-full items-center justify-center gap-2 rounded-3xl px-6 py-3 font-inter text-sm font-medium uppercase leading-6 text-white transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-[#D9CDF7] disabled:cursor-not-allowed disabled:opacity-[0.56]`}
