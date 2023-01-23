@@ -5,8 +5,8 @@ import React, {
   useEffect,
   useState,
 } from "react"
-import { PlayerVariant, Music } from "../types/playerTypes"
-import { musics } from "../data/musics"
+import { PlayerVariant, Music } from "@type/playerTypes"
+import { getMusics } from "@services"
 interface MusicPlayerContextData {
   isPlaying: boolean
   handlePlay: () => void
@@ -28,6 +28,8 @@ const MusicPlayerContext = createContext<MusicPlayerContextData>(
 )
 
 export function MusicPlayerProvider({ children }: MusicPlayerProviderProps) {
+  const musics = getMusics()
+
   const [isPlaying, setIsPlaying] = useState<boolean>(false)
   const [currentTime, setCurrentTime] = useState<number>(0)
   const [musicIndex, setMusicIndex] = useState<number>(0)

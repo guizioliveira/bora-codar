@@ -6,7 +6,7 @@ interface ToogleProps {
   setter: (value: boolean) => void
 }
 
-export function Toggle({ getter, setter }: ToogleProps) {
+export default function Toggle({ getter, setter }: ToogleProps) {
   return (
     <Switch
       checked={getter}

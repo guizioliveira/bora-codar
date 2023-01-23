@@ -8,7 +8,7 @@ interface SelectProps {
   getter: unknown
 }
 
-export function Select({ options, getter, setter }: SelectProps) {
+export default function Select({ options, getter, setter }: SelectProps) {
   return (
     <Listbox value={getter} onChange={setter}>
       <div className="relative">

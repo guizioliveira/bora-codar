@@ -1,4 +1,4 @@
-import { useMusicPlayer } from "../../hooks/useMusicPlayer"
+import { useMusicPlayer } from "@hooks"
 
 export default function VariantOptions() {
   const { variant, setVariant } = useMusicPlayer()

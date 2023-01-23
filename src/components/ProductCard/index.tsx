@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { X } from "phosphor-react"
 import { RotateButton } from "./RotateButton"
-import { useDocumentTitle } from "../../hooks/useDocument"
-import { productsForCard } from "../../data/products"
+import { useDocumentTitle } from "@hooks"
+import { getProducts } from "@services"
 
 interface ProductCardProps {
   productCode: number
@@ -11,7 +11,7 @@ interface ProductCardProps {
 export function ProductCard({ productCode }: ProductCardProps) {
   const [isRotating, setIsRotating] = useState<boolean>(false)
 
-  const selectedProduct = productsForCard.find(
+  const selectedProduct = getProducts().find(
     (product) => product.id === productCode
   )
 

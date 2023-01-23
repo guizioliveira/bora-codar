@@ -1,4 +1,4 @@
-export const musics = [
+const musics = [
   {
     id: 0,
     title: "Acorda Devinho",
@@ -14,3 +14,7 @@ export const musics = [
     albumCover: "assets/albumCover/2.jpg",
   },
 ]
+
+export function getMusics() {
+  return musics
+}

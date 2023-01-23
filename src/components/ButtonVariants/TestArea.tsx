@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { Toggle, Select } from "../Ui"
-import Button, { ButtonVariantType } from "../Ui/Button"
+import { Toggle, Select } from "@ui"
+import Button, { ButtonVariantType } from "@ui/Button"
 
 export function TestArea() {
   const [isLoading, setIsLoading] = useState<boolean>(false)

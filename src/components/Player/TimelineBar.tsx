@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { useMusicPlayer } from "../../hooks/useMusicPlayer"
+import { useMusicPlayer } from "@hooks"
 
 export function TimelineBar() {
   const { currentTime, secondsToMinutes, currentMusic } = useMusicPlayer()

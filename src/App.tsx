@@ -1,9 +1,9 @@
 import React from "react"
-import { BrowserRouter } from "react-router-dom"
 import ChallengeCard from "./components/ChallengeCard"
-import { challenges } from "./data/challengesData"
+import { getChallenges } from "@services"
 
 export default function App() {
+  const challenges = getChallenges()
   return (
     <div className=" bg-[#121214]">
       <div className="m-auto h-[calc(100vh-80px)] w-full p-7 md:container">

@@ -1,6 +1,6 @@
 import React from "react"
 import { Play, Rewind, FastForward, Pause } from "phosphor-react"
-import { useMusicPlayer } from "../../hooks/useMusicPlayer"
+import { useMusicPlayer } from "@hooks"
 
 export default function PlayerController() {
   const { isPlaying, handlePlay, nextMusic, previousMusic } = useMusicPlayer()

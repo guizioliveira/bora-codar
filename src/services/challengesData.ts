@@ -1,5 +1,4 @@
-const baseUrl = "/#"
-export const challenges = [
+const challenges = [
   {
     week: 1,
     title: "Music Player",
@@ -22,3 +21,7 @@ export const challenges = [
     imageSrc: "assets/challenges/week3.png",
   },
 ]
+
+export function getChallenges() {
+  return challenges
+}

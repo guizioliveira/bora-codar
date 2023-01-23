@@ -1,7 +1,7 @@
 import PlayerController from "./PlayerController"
 import { TimelineBar } from "./TimelineBar"
 
-import { useMusicPlayer } from "../../hooks/useMusicPlayer"
+import { useMusicPlayer } from "@hooks"
 
 export function PlayerContainer() {
   const { variant, currentMusic } = useMusicPlayer()

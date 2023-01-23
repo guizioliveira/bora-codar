@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { PlayerContainer } from "./PlayerContainer"
 import VariantOptions from "./VariantOptions"
-import { MusicPlayerProvider } from "../../hooks/useMusicPlayer"
-import { useDocumentTitle } from "../../hooks/useDocument"
+import { MusicPlayerProvider, useDocumentTitle } from "@hooks"
 import { CaretUp } from "phosphor-react"
 
 export function Player() {

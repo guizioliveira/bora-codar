@@ -1,4 +1,4 @@
-export const productsForCard = [
+const productsForCard = [
   {
     id: 42404,
     title: "Sofá Margot II - Rosé",
@@ -7,3 +7,7 @@ export const productsForCard = [
     productImageRotate: "assets/productCard/42404-rotate.gif",
   },
 ]
+
+export function getProducts() {
+  return productsForCard
+}

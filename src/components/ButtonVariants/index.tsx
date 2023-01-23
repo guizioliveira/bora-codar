@@ -1,13 +1,14 @@
 import React, { useState } from "react"
 import { TestArea } from "./TestArea"
-import { X } from "phosphor-react"
 import { Table, TableMobile } from "./ButtonTables"
-import Button from "../Ui/Button"
-import useWindowSize from "../../hooks/useWindowSize"
+import { Button } from "@ui"
+import { useWindowSize, useDocumentTitle } from "@hooks"
+import { X } from "phosphor-react"
 
 export function ButtonStylePage() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const { width } = useWindowSize()
+  useDocumentTitle("Product card")
 
   return (
     <div className="relative min-h-[calc(100vh-80px)] w-full overflow-hidden bg-[#0b0911] pt-12 md:pt-24">
