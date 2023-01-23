@@ -8,15 +8,15 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "bora-codar/player",
+    path: "/bora-codar/player",
     element: <Player />,
   },
   {
-    path: "bora-codar/product-card",
+    path: "/bora-codar/product-card",
     element: <ProductCard productCode={42404} />,
   },
   {
-    path: "bora-codar/buttons",
+    path: "/bora-codar/buttons",
     element: <ButtonStylePage />,
   },
 ])
