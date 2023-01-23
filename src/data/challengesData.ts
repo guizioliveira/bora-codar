@@ -1,4 +1,4 @@
-const baseUrl = "/bora-codar"
+const baseUrl = "/#"
 export const challenges = [
   {
     week: 1,
