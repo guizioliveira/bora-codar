@@ -6,7 +6,7 @@ export function Header() {
     <div className="h-20 w-full border-b-[1px] border-b-[#323238] bg-[#121214]">
       <div className="m-auto flex h-full items-center justify-between px-7 md:container">
         <a
-          href="/"
+          href="/bora-codar/"
           className="font-firaCode text-xl text-[#9b6cfd] transition-colors duration-300 hover:text-[#c3a7fd]"
         >
           {`\\> boraCodar_`}
