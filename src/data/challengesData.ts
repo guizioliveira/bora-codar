@@ -10,7 +10,7 @@ export const challenges = [
   {
     week: 2,
     title: "Product Card",
-    path: `${baseUrl}/productCard`,
+    path: `${baseUrl}/product-card`,
     figmaUrl: "https://www.figma.com/community/file/1195050984449538256",
     imageSrc: "assets/challenges/week2.png",
   },
