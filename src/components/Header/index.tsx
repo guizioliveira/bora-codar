@@ -1,4 +1,5 @@
 import { LinkedinLogo, GithubLogo } from "phosphor-react"
+import { Link as LinkRouter } from "react-router-dom"
 
 export function Header() {
   return (
@@ -10,6 +11,7 @@ export function Header() {
         >
           {`\\> boraCodar_`}
         </a>
+
         <div className="flex gap-3">
           <a
             target="_blank"
