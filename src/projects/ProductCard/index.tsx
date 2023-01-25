@@ -8,7 +8,7 @@ interface ProductCardProps {
   productCode: number
 }
 
-export function ProductCard({ productCode }: ProductCardProps) {
+export default function ProductCard({ productCode }: ProductCardProps) {
   const [isRotating, setIsRotating] = useState<boolean>(false)
 
   const selectedProduct = getProducts().find(

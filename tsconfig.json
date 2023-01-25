@@ -23,7 +23,9 @@
       "@components": ["./src/components"],
       "@hooks": ["./src/hooks"],
       "@type/*": ["./src/types/*"],
-      "@services": ["./src/services"]
+      "@services": ["./src/services"],
+      "@projects/*": ["./src/projects/*"],
+      "@projects": ["./src/projects"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

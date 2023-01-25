@@ -14,6 +14,8 @@ export default defineConfig({
       "@hooks": path.resolve(__dirname, "./src/hooks"),
       "@type/*": path.resolve(__dirname, "./src/types/*"),
       "@services": path.resolve(__dirname, "./src/services"),
+      "@projects/*": path.resolve(__dirname, "./src/projects/*"),
+      "@projects": path.resolve(__dirname, "./src/projects/"),
     },
   },
   base: "/bora-codar/",

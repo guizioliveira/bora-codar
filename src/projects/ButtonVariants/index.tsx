@@ -5,7 +5,7 @@ import { Button } from "@ui"
 import { useWindowSize, useDocumentTitle } from "@hooks"
 import { X } from "phosphor-react"
 
-export function ButtonStylePage() {
+export default function ButtonStylePage() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const { width } = useWindowSize()
   useDocumentTitle("Product card")
