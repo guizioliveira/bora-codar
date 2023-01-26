@@ -16,7 +16,7 @@ export function History() {
   }, [messages])
 
   return (
-    <div className="max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-zinc-700">
+    <div className="max-h-[463px] overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-zinc-700 md:max-h-[400px]">
       <div className="mb-6 w-full text-center text-xs text-[#E1E1E6]">
         {dayjs(messages[0].send_at).calendar(null, {
           sameDay: "[Today] HH:mm",

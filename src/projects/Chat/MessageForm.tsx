@@ -20,7 +20,7 @@ export function MessageForm() {
       className="mt-14 w-full rounded-full bg-[#282843]"
     >
       <input
-        className="inline-block w-11/12 rounded-full bg-[#282843] py-[19px] px-6 text-xs leading-[14px] text-[#E1E1E6] outline-none placeholder:text-[#E1E1E6]"
+        className="inline-block w-4/5 rounded-full bg-[#282843] py-[19px] px-6 text-xs leading-[14px] text-[#E1E1E6] outline-none placeholder:text-[#E1E1E6] md:w-11/12"
         type="text"
         value={currentMessage}
         onChange={(event) => setCurrentMessage(event.target.value.toString())}
