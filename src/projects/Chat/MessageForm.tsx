@@ -17,10 +17,10 @@ export function MessageForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-14 w-full rounded-full bg-[#282843]"
+      className="mt-14 flex w-full rounded-full bg-[#282843]"
     >
       <input
-        className="inline-block w-4/5 rounded-full bg-[#282843] py-[19px] px-6 text-xs leading-[14px] text-[#E1E1E6] outline-none placeholder:text-[#E1E1E6] md:w-11/12"
+        className="w-[calc(100%-58px)] rounded-full bg-[#282843] py-[19px] px-6 text-xs leading-[14px] text-[#E1E1E6] outline-none placeholder:text-[#E1E1E6]"
         type="text"
         value={currentMessage}
         onChange={(event) => setCurrentMessage(event.target.value.toString())}
@@ -31,7 +31,7 @@ export function MessageForm() {
           weight="fill"
           size={24}
           color="#E1E1E6"
-          className=" ml-[10px] inline-block"
+          className="ml-[10px]"
         />
       </button>
     </form>

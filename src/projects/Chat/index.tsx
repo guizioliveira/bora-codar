@@ -20,7 +20,7 @@ export default function Chat() {
             </button>
           </div>
           <History />
-          <div className="absolute bottom-[32px] left-[32px] w-[85%] md:relative md:bottom-0 md:left-0 md:w-full">
+          <div className="fixed bottom-[32px] left-[32px] w-[calc(100%-64px)] md:relative md:bottom-0 md:left-0 md:w-full">
             <MessageForm />
           </div>
         </div>
