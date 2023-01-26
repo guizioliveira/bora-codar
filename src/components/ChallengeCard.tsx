@@ -14,7 +14,7 @@ export default function ChallengeCard({ challenge }: ChallengeCardProps) {
   return (
     <div
       key={challenge.week}
-      className="group relative flex h-56 flex-col rounded-md bg-[#202024] shadow-2xl shadow-[#323238] md:h-44 xl:h-64"
+      className="group relative flex h-56 flex-col rounded-md bg-[#202024] shadow-lg shadow-[#00000067] md:h-44 xl:h-64"
     >
       <div className="flex h-full overflow-hidden rounded-md">
         <img
