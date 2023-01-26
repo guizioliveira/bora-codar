@@ -9,8 +9,8 @@ import { MessageForm } from "./MessageForm"
 export default function Chat() {
   return (
     <ChatProvider>
-      <div className="flex h-[calc(100vh-80px)] w-screen flex-col items-center justify-center">
-        <div className="max-h-[693px] w-[95%] rounded-lg bg-[#1A1924] py-6 px-[32px] md:max-h-[630px] md:w-[1024px] md:py-8 md:px-[72px]">
+      <div className="relative flex h-[calc(100vh-80px)] w-screen flex-col md:items-center md:justify-center">
+        <div className="h-screen w-full rounded-lg bg-[#1A1924] py-6 px-[32px] md:max-h-[630px] md:w-[1024px] md:py-8 md:px-[72px]">
           <div className="mb-[26px] flex items-center justify-between md:mb-[14px]">
             <ContactBar person={getContactById("1")} />
             <button>
@@ -18,7 +18,9 @@ export default function Chat() {
             </button>
           </div>
           <History />
-          <MessageForm />
+          <div className="absolute bottom-[32px] left-[32px] w-[85%] md:relative md:bottom-0 md:left-0 md:w-full">
+            <MessageForm />
+          </div>
         </div>
       </div>
     </ChatProvider>
