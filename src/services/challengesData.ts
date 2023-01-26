@@ -20,6 +20,13 @@ const challenges = [
     figmaUrl: "https://www.figma.com/community/file/1197534710257750520",
     imageSrc: "assets/challenges/week3.png",
   },
+  {
+    week: 4,
+    title: "Chat layout",
+    path: `chat`,
+    figmaUrl: "https://www.figma.com/community/file/1200070743637495660",
+    imageSrc: "assets/challenges/week4.png",
+  },
 ]
 
 export function getChallenges() {

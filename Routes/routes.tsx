@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route } from "react-router-dom"
 import App from "../src/App"
-import { Buttons, Player, ProductCard } from "@projects"
+import { Buttons, Player, ProductCard, Chat } from "@projects"
 
 function RouterApp() {
   return (
@@ -13,6 +13,7 @@ function RouterApp() {
           element={<ProductCard productCode={42404} />}
         />
         <Route path="/buttons" element={<Buttons />} />
+        <Route path="/chat" element={<Chat />} />
       </Routes>
     </HashRouter>
   )
