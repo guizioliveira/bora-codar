@@ -26,7 +26,7 @@ export function ChatBubble({ message }: ChatBubbleProps) {
           message.send_by_me
             ? "rounded-br-none bg-[#07847E]"
             : "rounded-tl-none bg-[#633BBC]"
-        } max-w-[55%] rounded-lg p-[14px] text-xs leading-[14px] text-[#E1E1E6] md:max-w-[75%]`}
+        } max-w-[55%] break-words rounded-lg p-[14px] text-xs leading-[14px] text-[#E1E1E6] md:max-w-[75%]`}
       >
         {message.text}
       </div>
