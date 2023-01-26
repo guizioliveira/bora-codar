@@ -1,5 +1,6 @@
 import { Link, FigmaLogo } from "phosphor-react"
 import { Link as LinkRouter } from "react-router-dom"
+
 interface ChallengeCardProps {
   challenge: {
     week: number

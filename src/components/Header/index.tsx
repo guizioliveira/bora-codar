@@ -1,5 +1,4 @@
 import { LinkedinLogo, GithubLogo } from "phosphor-react"
-import { Link as LinkRouter } from "react-router-dom"
 
 export function Header() {
   return (
@@ -23,7 +22,7 @@ export function Header() {
               size={30}
             />
           </a>
-          <a target="_blank" href="https://github.com/guizioliveira">
+          <a target="_blank" href="https://github.com/guizioliveira/bora-codar">
             <GithubLogo
               className="text-[#9b6cfd] transition-colors duration-300 hover:text-[#c3a7fd]"
               weight="fill"

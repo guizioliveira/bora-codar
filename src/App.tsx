@@ -1,5 +1,5 @@
 import React from "react"
-import ChallengeCard from "./components/ChallengeCard"
+import ChallengeCard from "@components/ChallengeCard"
 import { getChallenges } from "@services"
 
 export default function App() {
