@@ -1,12 +1,14 @@
 import React from "react"
 import { ContactBar } from "./ContactBar"
 import { History } from "./History"
-import { ChatProvider } from "@hooks"
+import { ChatProvider, useDocumentTitle } from "@hooks"
 import { getContactById } from "@services"
 import { X } from "phosphor-react"
 import { MessageForm } from "./MessageForm"
 
 export default function Chat() {
+  useDocumentTitle("Chat")
+
   return (
     <ChatProvider>
       <div className="relative flex h-[calc(100vh-80px)] w-screen flex-col md:items-center md:justify-center">

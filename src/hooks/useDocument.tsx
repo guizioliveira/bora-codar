@@ -1,3 +1,3 @@
 export function useDocumentTitle(title: string) {
-  return (document.title = `${title} | boraCodar`)
+  return (document.title = `${title} | boraCodar - Guilherme de Oliveira`)
 }
