@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import Routers from "../Routes/routes"
-import { Header } from "./components/Header"
+import Routers from "../routes/routes"
+import { Header } from "@components/Header"
 
 import "./styles/global.css"
 
