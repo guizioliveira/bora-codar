@@ -8,7 +8,7 @@ import { X } from "phosphor-react"
 export default function ButtonStylePage() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const { width } = useWindowSize()
-  useDocumentTitle("Product card")
+  useDocumentTitle("Design system - Buttons")
 
   return (
     <div className="relative min-h-[calc(100vh-80px)] w-full overflow-hidden bg-[#0b0911] pt-12 md:pt-24">
