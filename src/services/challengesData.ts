@@ -27,6 +27,13 @@ const challenges = [
     figmaUrl: "https://www.figma.com/community/file/1200070743637495660",
     imageSrc: "assets/challenges/week4.png",
   },
+  {
+    week: 5,
+    title: "Calculator",
+    path: `calculator`,
+    figmaUrl: "https://www.figma.com/community/file/1202607074523509182",
+    imageSrc: "assets/challenges/week5.png",
+  },
 ]
 
 export function getChallenges() {
