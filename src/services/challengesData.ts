@@ -34,6 +34,13 @@ const challenges = [
     figmaUrl: "https://www.figma.com/community/file/1202607074523509182",
     imageSrc: "assets/challenges/week5.png",
   },
+  {
+    week: 6,
+    title: "Boarding Pass",
+    path: `boarding-pass`,
+    figmaUrl: "https://www.figma.com/community/file/1205146101173113980",
+    imageSrc: "assets/challenges/week6.png",
+  },
 ]
 
 export function getChallenges() {

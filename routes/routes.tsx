@@ -1,6 +1,13 @@
 import { HashRouter, Routes, Route } from "react-router-dom"
 import App from "../src/App"
-import { Buttons, Player, ProductCard, Chat, Calculator } from "@projects"
+import {
+  Buttons,
+  Player,
+  ProductCard,
+  Chat,
+  Calculator,
+  BoardingPass,
+} from "@projects"
 
 function RouterApp() {
   return (
@@ -15,6 +22,7 @@ function RouterApp() {
         <Route path="buttons" element={<Buttons />} />
         <Route path="chat" element={<Chat />} />
         <Route path="calculator" element={<Calculator />} />
+        <Route path="boarding-pass" element={<BoardingPass />} />
       </Routes>
     </HashRouter>
   )
