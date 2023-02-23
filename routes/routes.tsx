@@ -7,6 +7,7 @@ import {
   Chat,
   Calculator,
   BoardingPass,
+  Dashboard,
 } from "@projects"
 
 function RouterApp() {
@@ -23,6 +24,7 @@ function RouterApp() {
         <Route path="chat" element={<Chat />} />
         <Route path="calculator" element={<Calculator />} />
         <Route path="boarding-pass" element={<BoardingPass />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Routes>
     </HashRouter>
   )
