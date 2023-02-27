@@ -28,7 +28,7 @@ jobs:
 
       - name: Build project
         run: npm run build
-        with:
+        env:
           VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
 
       - name: Deploy to Github Pages
