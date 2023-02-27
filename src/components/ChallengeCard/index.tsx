@@ -1,14 +1,9 @@
+import { challengeType } from "@type/challengesTypes"
 import { Link, FigmaLogo } from "phosphor-react"
 import { Link as LinkRouter } from "react-router-dom"
 
 interface ChallengeCardProps {
-  challenge: {
-    week: number
-    title: string
-    path: string
-    imageSrc: string
-    figmaUrl: string
-  }
+  challenge: challengeType
 }
 
 export default function ChallengeCard({ challenge }: ChallengeCardProps) {
@@ -20,7 +15,7 @@ export default function ChallengeCard({ challenge }: ChallengeCardProps) {
       <div className="flex h-full overflow-hidden rounded-md">
         <img
           className="w-full object-cover transition-transform duration-300 md:group-hover:scale-125"
-          src={challenge.imageSrc}
+          src={challenge.imageSrc.url}
           alt={`Image of ${challenge.title}`}
         />
       </div>
