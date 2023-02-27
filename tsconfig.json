@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-
+    "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
       "@ui/*": ["./src/components/Ui/*"],
