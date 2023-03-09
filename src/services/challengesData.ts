@@ -57,7 +57,7 @@ import { challengeType } from "@type/challengesTypes"
 
 const GET_ALL_CHALLENGES_QUERY = gql`
   query {
-    challenges(orderBy: week_ASC, stage: PUBLISHED) {
+    challenges(orderBy: week_DESC, stage: PUBLISHED) {
       path
       week
       title
