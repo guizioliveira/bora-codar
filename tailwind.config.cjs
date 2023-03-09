@@ -31,6 +31,7 @@ module.exports = {
 
         "calculator-button-press":
           "0px 5px 3.5px rgba(0, 0, 0, 0.01), 0px 3.5px 1.5px rgba(0, 0, 0, 0.04), 0px 2px 3px rgba(0, 0, 0, 0.10), 0px 1px 1px rgba(0, 0, 0, 0.26), 0px 0px 0px rgba(0, 0, 0, 0.29), inset 0px 1px 1.5px rgba(255, 255, 255, 0.06);",
+        "dashboard-box": "3px 4px 26px rgba(0, 0, 0, 0.25);",
       },
     },
   },
