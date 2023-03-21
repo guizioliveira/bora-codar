@@ -1,21 +1,50 @@
 import React, { useEffect, useRef, useState } from "react"
 
-type daySales = {
+type DaySales = {
   day: string
   sales: number
 }
 
-export default function WeeklyChart() {
-  const weekdays: daySales[] = [
-    { day: "sunday", sales: 39 },
-    { day: "monday", sales: 115 },
-    { day: "tuensday", sales: 76 },
-    { day: "wednesday", sales: 159 },
-    { day: "thursday", sales: 129 },
-    { day: "friday", sales: 120 },
-    { day: "saturday", sales: 69 },
-  ]
+const weekdays: DaySales[] = [
+  { day: "sunday", sales: 39 },
+  { day: "monday", sales: 115 },
+  { day: "tuensday", sales: 76 },
+  { day: "wednesday", sales: 159 },
+  { day: "thursday", sales: 129 },
+  { day: "friday", sales: 120 },
+  { day: "saturday", sales: 69 },
+]
 
+interface ChartLineProps {
+  sales: number
+}
+
+const ChartLine = ({ sales }: ChartLineProps) => {
+  const [currentSale, setCurrentSale] = useState<number>(0)
+  const interval = useRef(null)
+
+  useEffect(() => {
+    interval.current = window.setInterval(() => {
+      setCurrentSale((currentSale) =>
+        currentSale < sales ? currentSale + 1 : currentSale
+      )
+    }, 5)
+    return () => window.clearInterval(interval.current)
+  }, [sales])
+
+  return (
+    <div
+      className={`group relative w-[15px] rounded-full bg-gradient-to-t from-[#32CCBC] to-[#90F7EC] transition-transform duration-300 md:hover:scale-110`}
+      style={{ height: `${currentSale}px` }}
+    >
+      <div className="absolute left-5 top-1/3 rounded-xl bg-gray-500 py-1 px-2 text-sm font-semibold text-gray-200 opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+        {sales}
+      </div>
+    </div>
+  )
+}
+
+export default function WeeklyChart() {
   return (
     <div>
       <div className="relative h-[186px] w-full">
@@ -33,33 +62,6 @@ export default function WeeklyChart() {
             </div>
           ))}
         </div>
-      </div>
-    </div>
-  )
-}
-
-interface ChartLineProps {
-  sales: number
-}
-
-const ChartLine = ({ sales }: ChartLineProps) => {
-  const [currentSale, setCurrentSale] = useState<number>(0)
-  const interval = useRef(null)
-
-  useEffect(() => {
-    interval.current = setInterval(() => {
-      setCurrentSale((state) => (state < sales ? state + 1 : state))
-    }, 5)
-    return () => clearInterval(interval.current)
-  }, [sales])
-
-  return (
-    <div
-      style={{ height: `${currentSale}px` }}
-      className={`group relative w-[15px] rounded-full bg-gradient-to-t from-[#32CCBC] to-[#90F7EC] transition-transform duration-300 md:hover:scale-110`}
-    >
-      <div className="absolute left-5 top-1/3 rounded-xl bg-gray-500 py-1 px-2 text-sm font-semibold text-gray-200 opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
-        {sales}
       </div>
     </div>
   )

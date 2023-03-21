@@ -6,7 +6,7 @@ import NPSScore from "./NPSScore"
 import WeeklyChart from "./WeeklyChart"
 
 export default function Dashboard() {
-  const [nps, setNps] = useState<number>(75)
+  const nps = 75
 
   return (
     <div className="flex w-full bg-[#292738] md:h-[calc(100vh-80px)] md:items-center md:justify-center">

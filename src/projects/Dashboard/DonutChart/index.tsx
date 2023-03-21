@@ -23,18 +23,18 @@ export default function DonutChart({ percent, variant }: DonutChart) {
       : `calc(${dash} - (${dash} * ${percertAnimated}) / 100)`
 
   useEffect(() => {
-    interval.current = setInterval(() => {
-      setPercertAnimated((state) => {
-        if (state < percent) {
-          return state + 1
-        } else if (state > percent) {
-          return state - 1
+    interval.current = window.setInterval(() => {
+      setPercertAnimated((currentPercent) => {
+        if (currentPercent < percent) {
+          return currentPercent + 1
+        } else if (currentPercent > percent) {
+          return currentPercent - 1
         } else {
-          return state
+          return currentPercent
         }
       })
     }, 10)
-    return () => clearInterval(interval.current)
+    return () => window.clearInterval(interval.current)
   }, [percent])
 
   return (
