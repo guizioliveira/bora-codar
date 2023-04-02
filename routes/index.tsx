@@ -1,5 +1,5 @@
 import { HashRouter, Routes, Route } from "react-router-dom"
-import ChallengesList from "@components/ChallengesList"
+import App from "../src/App"
 import {
   Buttons,
   Player,
@@ -8,13 +8,14 @@ import {
   Calculator,
   BoardingPass,
   Dashboard,
+  Carnaval,
 } from "@projects"
 
 function RouterApp() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<ChallengesList />} />
+        <Route path="/" element={<App />} />
         <Route path="music-player" element={<Player />} />
         <Route
           path="product-card"
@@ -25,6 +26,7 @@ function RouterApp() {
         <Route path="calculator" element={<Calculator />} />
         <Route path="boarding-pass" element={<BoardingPass />} />
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="carnaval" element={<Carnaval />} />
       </Routes>
     </HashRouter>
   )
