@@ -8,10 +8,9 @@ import { MessageForm } from "./MessageForm"
 
 export default function Chat() {
   useDocumentTitle("Chat")
-
   return (
     <ChatProvider>
-      <div className="relative flex h-[calc(100vh-80px)] w-screen flex-col bg-[#0b0911] md:items-center md:justify-center">
+      <div className="relative flex h-screen w-screen flex-col bg-[#0b0911] md:items-center md:justify-center">
         <div className="h-screen w-full rounded-lg bg-[#1A1924] py-6 px-[32px] md:max-h-[630px] md:w-[1024px] md:py-8 md:px-[72px]">
           <div className="mb-[26px] flex items-center justify-between md:mb-[14px]">
             <ContactBar person={getContactById("1")} />

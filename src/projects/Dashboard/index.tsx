@@ -1,15 +1,16 @@
-import { Triangle } from "phosphor-react"
-import { useState } from "react"
+import { useDocumentTitle } from "@hooks"
 import { Box } from "./Box"
 import Chart from "./Chart"
 import NPSScore from "./NPSScore"
 import WeeklyChart from "./WeeklyChart"
+import { Triangle } from "phosphor-react"
 
 export default function Dashboard() {
+  useDocumentTitle("Dashboard")
   const nps = 75
 
   return (
-    <div className="flex w-full bg-[#292738] md:h-[calc(100vh-80px)] md:items-center md:justify-center">
+    <div className="flex w-full bg-[#292738] md:h-screen md:items-center md:justify-center">
       <div className="mx-auto mt-8 mb-8 flex w-[85%] flex-col gap-8 md:m-0 md:w-[1120px] md:gap-14 md:px-4">
         <div className="flex flex-col gap-8 md:flex-row">
           <NPSScore score={nps} />

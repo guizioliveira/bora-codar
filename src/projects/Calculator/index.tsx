@@ -9,8 +9,10 @@ import {
   PlusMinus,
 } from "phosphor-react"
 import Button from "./Button"
+import { useDocumentTitle } from "@hooks"
 
 export default function Calculator() {
+  useDocumentTitle("Calculator")
   const [currentNumber, setCurrentNumber] = useState<string>("")
   const [calculationResult, setCalculationResult] = useState<number>(0)
 
@@ -34,7 +36,7 @@ export default function Calculator() {
   }
 
   return (
-    <div className="flex h-[calc(100vh-80px)] w-screen items-center justify-center bg-gradient-to-b from-[#807ECE] to-[#8E7ECE]">
+    <div className="flex h-screen w-screen items-center justify-center bg-gradient-to-b from-[#807ECE] to-[#8E7ECE]">
       <div className="flex h-[566px] w-[358px] flex-col gap-[26px] rounded-[48px] bg-[#2D2A37] p-8 pt-[54px] shadow-calculator-box">
         <div className="w-full pl-[18px] pr-[22px]">
           <span className="block h-7 w-full text-right font-rubik text-[20px] text-[#686868]">
@@ -43,7 +45,7 @@ export default function Calculator() {
           <div className="flex items-center justify-between">
             <Equals weight="bold" size={20} color={"#6B6B6B"} />
             <span className="text-right font-rubik text-[36px] text-[#EBEBEB]">
-              {calculationResult.toLocaleString("pt-BR", )}
+              {calculationResult.toLocaleString("pt-BR")}
             </span>
           </div>
         </div>

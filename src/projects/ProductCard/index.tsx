@@ -9,16 +9,15 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ productCode }: ProductCardProps) {
+  useDocumentTitle("Product card")
   const [isRotating, setIsRotating] = useState<boolean>(false)
 
   const selectedProduct = getProducts().find(
     (product) => product.id === productCode
   )
 
-  useDocumentTitle("Product card")
-
   return (
-    <div className="flex h-[calc(100vh-80px)] items-center justify-center bg-[#1e1e1e]">
+    <div className="flex h-screen items-center justify-center bg-[#1e1e1e]">
       {selectedProduct !== undefined ? (
         <div className="m-auto flex h-[498px] w-[875px] flex-col items-center gap-[13px] rounded-[9.6px] bg-[#d9cdf7] py-7 md:flex-row md:py-0">
           <div className="relative">
