@@ -11,22 +11,22 @@ export default function ButtonStylePage() {
   useDocumentTitle("Design system - Buttons")
 
   return (
-    <div className="relative min-h-[calc(100vh-80px)] w-full overflow-hidden bg-[#0b0911] pt-12 md:pt-24">
+    <div className="relative min-h-screen w-full overflow-hidden bg-[#0b0911] pt-12 md:pt-24">
       <div className="m-auto flex w-full flex-col px-5 md:w-[958px] md:p-0">
         <h1 className="mb-8 w-full text-left font-inter text-[32px] font-bold leading-[32px] text-white md:mb-2">
-          Tipos de botão
+          Button types
         </h1>
         <p className="font-sans text-xl text-white opacity-[0.67] md:leading-[23px]">
-          Dentro de um layout, botões servem para destacar ações importantes a
-          serem tomadas.
+          Within a layout, buttons serve to highlight important actions to be
+          taken.
         </p>
         <p className="font-sans text-xl text-white opacity-[0.67] md:leading-[23px]">
-          Acompanhe abaixo um exemplo de tipos e propriedades.
+          Below is an example of types and properties.
         </p>
         <Button
           className="my-7 w-2/3  md:w-1/3"
           variant="primary"
-          label="Bora testar!"
+          label="Let's try it!"
           onClick={() => {
             setIsOpen(true)
           }}

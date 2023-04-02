@@ -12,14 +12,14 @@ export function TestArea() {
   return (
     <div>
       <h2 className="font-inter text-[32px] font-bold leading-8 text-white antialiased">
-        Teste os botões
+        Button test
       </h2>
       <p className="mt-2 font-sans text-[19px] leading-6 text-white antialiased opacity-[0.67]">
-        Interaja com os botões e observe a mudança de aparência e de cursores
+        Interact with the buttons and watch the appearance and cursors change
       </p>
       <div className="mt-[68px]">
         <Button
-          label="interaja comigo"
+          label="try me"
           loading={isLoading}
           movable={isMovable}
           variant={variant}
