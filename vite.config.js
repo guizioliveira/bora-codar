@@ -18,5 +18,5 @@ export default defineConfig({
       "@projects": path.resolve(__dirname, "./src/projects/"),
     },
   },
-  base: "/bora-codar/",
+  base: "/bora-codar",
 })
