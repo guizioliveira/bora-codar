@@ -1,8 +1,10 @@
+import { useDocumentTitle } from "@hooks"
 import { Airplane } from "phosphor-react"
 
 export default function BoardingPass() {
+  useDocumentTitle("Boarding Pass")
   return (
-    <div className="flex h-[calc(100vh-80px)] w-full items-center justify-center bg-gradient-to-b from-[#8257E5] to-[#271A45]">
+    <div className="flex h-screen w-full items-center justify-center bg-gradient-to-b from-[#8257E5] to-[#271A45]">
       <div className="flex w-[20.5rem] flex-col font-rubik">
         <div className="flex w-full flex-col gap-6 rounded-3xl bg-white py-6 px-8">
           <div className="flex items-center justify-between gap-6">
