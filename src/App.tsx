@@ -1,8 +1,9 @@
 import React from "react"
 import { Header } from "@components/Header"
 import ChallengeCard from "@components/ChallengeCard"
-import { getChallenges } from "@services"
+import ElementLoop from "@components/ElementLoop"
 import ChallengeCardSkeleton from "@components/ChallengeCardSkeleton"
+import { getChallenges } from "@services"
 
 export default function App() {
   const { data, loading } = getChallenges()
@@ -12,7 +13,9 @@ export default function App() {
       <div className="m-auto w-full p-4 md:container md:p-7">
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
           {loading ? (
-            <ChallengeCardSkeleton numberOfCards={6} />
+            <ElementLoop times={6}>
+              <ChallengeCardSkeleton />
+            </ElementLoop>
           ) : (
             <>
               {data.challenges.map((challenge) => (
